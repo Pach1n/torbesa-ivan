@@ -17,7 +17,7 @@ public class ScoreServlet extends HttpServlet {
         this.oScoreService = new ScoreService();
     }
 
-    // Constructor para inyección en tests
+    // Constructor para inyecciÃ³n en tests
     public ScoreServlet(ScoreService scoreService) {
         this.oScoreService = scoreService;
     }
@@ -30,22 +30,22 @@ public class ScoreServlet extends HttpServlet {
             RequestDispatcher dispatcher = request.getRequestDispatcher("highscores.jsp");
             dispatcher.forward(request, response);
         } catch (SQLException e) {
-            System.err.println("Error al ejecutar la operación en la base de datos: " + e.getMessage());
+            System.err.println("Error al ejecutar la operaciÃ³n en la base de datos: " + e.getMessage());
             request.setAttribute("errorMessage", "Database error");
             RequestDispatcher dispatcher = request.getRequestDispatcher("../shared/error.jsp");
             try {
                 dispatcher.forward(request, response);
             } catch (ServletException | IOException e1) {
-                System.err.println("Error al redirigir a la página de error: " + e1.getMessage());
+                System.err.println("Error al redirigir a la pÃ¡gina de error: " + e1.getMessage());
             }
         } catch (ServletException | IOException e) {
-            System.err.println("Error al ejecutar la operación en la base de datos: " + e.getMessage());
+            System.err.println("Error al ejecutar la operaciÃ³n en la base de datos: " + e.getMessage());
             request.setAttribute("errorMessage", "Internal error");
             RequestDispatcher dispatcher = request.getRequestDispatcher("../shared/error.jsp");
             try {
                 dispatcher.forward(request, response);
             } catch (ServletException | IOException e1) {
-                System.err.println("Error al redirigir a la página de error: " + e1.getMessage());
+                System.err.println("Error al redirigir a la pÃ¡gina de error: " + e1.getMessage());
             }
         } catch (Exception e) {
             System.err.println("Error inesperado: " + e.getMessage());
@@ -54,7 +54,7 @@ public class ScoreServlet extends HttpServlet {
             try {
                 dispatcher.forward(request, response);
             } catch (ServletException | IOException e1) {
-                System.err.println("Error al redirigir a la página de error: " + e1.getMessage());
+                System.err.println("Error al redirigir a la pÃ¡gina de error: " + e1.getMessage());
             }
         }
     }

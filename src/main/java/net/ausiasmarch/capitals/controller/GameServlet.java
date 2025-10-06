@@ -31,7 +31,7 @@ public class GameServlet extends HttpServlet {
             try {
                 response.sendRedirect("../shared/login.jsp");
             } catch (IOException e) {
-                System.err.println("Error al redirigir a la página de inicio de sesión: " + e.getMessage());
+                System.err.println("Error al redirigir a la pÃ¡gina de inicio de sesiÃ³n: " + e.getMessage());
             }
             return;
         } else {
@@ -47,7 +47,7 @@ public class GameServlet extends HttpServlet {
         try {
             dispatcher.forward(request, response);
         } catch (ServletException | IOException e) {
-            System.err.println("Error al redirigir a la página del juego: " + e.getMessage());
+            System.err.println("Error al redirigir a la pÃ¡gina del juego: " + e.getMessage());
         }
     }
 

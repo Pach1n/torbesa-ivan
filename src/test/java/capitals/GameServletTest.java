@@ -68,7 +68,7 @@ public class GameServletTest {
         when(request.getParameter("country")).thenReturn("Spain");
         when(request.getParameter("capitalGuess")).thenReturn("");
         when(request.getRequestDispatcher("scores.jsp")).thenReturn(dispatcher);
-        // El resto de dependencias (servicios, DAOs) deberían ser mockeadas para un test más robusto
+        // El resto de dependencias (servicios, DAOs) deberÃ­an ser mockeadas para un test mÃ¡s robusto
         servlet.doPost(request, response);
         verify(request).setAttribute(eq("username"), eq("testuser"));
         verify(dispatcher).forward(request, response);
